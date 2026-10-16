@@ -1,0 +1,7 @@
+[
+  { "id": "2048", "title": "2048", "license": "MIT", "notice": "games/2048/LICENSE.txt" },
+  { "id": "orb-farm", "title": "Orb Farm", "license": "MIT", "notice": "games/orb-farm/LICENSE" },
+  { "id": "flappy-2048", "title": "Flappy 2048", "license": "MIT", "notice": "games/flappy-2048/LICENSE.txt" },
+  { "id": "tower-master", "title": "Tower Master", "license": "MIT", "notice": "games/tower-master/LICENSE" },
+  { "id": "a-dark-room", "title": "A Dark Room", "license": "MPL-2.0", "notice": "games/a-dark-room/LICENSE.md" }
+]

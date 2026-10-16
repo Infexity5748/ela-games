@@ -8,6 +8,10 @@ redistribution licence or publisher permission before their files are included.
 | Game | Author | Permission | Files |
 | --- | --- | --- | --- |
 | 2048 | Gabriele Cirulli | MIT | `games/2048/` |
+| Orb Farm | Max Bittker | MIT | `games/orb-farm/` |
+| Flappy 2048 | hczhcz / Gabriele Cirulli | MIT | `games/flappy-2048/` |
+| Tower Master | BMQB Inc | MIT | `games/tower-master/` |
+| A Dark Room | Michael Townsend and contributors | MPL-2.0 | `games/a-dark-room/` |
 
 Each game retains its licence and provenance. 2048 uses the author's complete
 browser runtime with relative asset paths. No proprietary game packages have
