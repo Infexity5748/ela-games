@@ -3,5 +3,15 @@
   { "id": "orb-farm", "title": "Orb Farm", "license": "MIT", "notice": "games/orb-farm/LICENSE" },
   { "id": "flappy-2048", "title": "Flappy 2048", "license": "MIT", "notice": "games/flappy-2048/LICENSE.txt" },
   { "id": "tower-master", "title": "Tower Master", "license": "MIT", "notice": "games/tower-master/LICENSE" },
-  { "id": "a-dark-room", "title": "A Dark Room", "license": "MPL-2.0", "notice": "games/a-dark-room/LICENSE.md" }
+  { "id": "a-dark-room", "title": "A Dark Room", "license": "MPL-2.0", "notice": "games/a-dark-room/LICENSE.md" },
+  { "id": "bitlife", "title": "BitLife", "permission": "owner-reported", "notice": "games/bitlife/PROVENANCE.md", "required": ["Build/BitLife.json"], "unityManifest": "Build/BitLife.json" },
+  { "id": "retro-bowl", "title": "Retro Bowl", "permission": "owner-reported", "notice": "games/retro-bowl/PROVENANCE.md", "required": ["html5game/RetroBowl.js", "html5game/uph_poki.js", "html5game/Schedule17.txt", "html5game/Teams.txt", "html5game/LanguageUS.txt"] },
+  { "id": "slope", "title": "Slope", "permission": "owner-reported", "notice": "games/slope/PROVENANCE.md", "unityManifest": "Build/slope_27Sept.json", "remoteResources": ["www.googletagmanager.com"] },
+  { "id": "tanuki-sunset", "title": "Tanuki Sunset", "permission": "owner-reported", "notice": "games/tanuki-sunset/PROVENANCE.md", "unityManifest": "tanuki.json" },
+  { "id": "basketball-stars", "title": "Basketball Stars", "permission": "owner-reported", "notice": "games/basketball-stars/PROVENANCE.md", "remoteResources": ["imasdk.googleapis.com"], "required": ["vendor/BlurX.js", "vendor/BlurY.js", "vendor/phaser-cachebuster.min.js", "vendor/phaser-super-storage.min.js"] },
+  { "id": "basketball-legends", "title": "Basketball Legends 2020", "permission": "owner-reported", "notice": "games/basketball-legends/PROVENANCE.md" },
+  { "id": "deepest-sword", "title": "Deepest Sword", "permission": "owner-reported", "notice": "games/deepest-sword/PROVENANCE.md", "required": ["Build/WebBuilds.loader.js", "Build/WebBuilds.data", "Build/WebBuilds.framework.js", "Build/WebBuilds.wasm"] },
+  { "id": "doodle-jump", "title": "HTML5 Doodle Jump", "permission": "owner-reported", "notice": "games/doodle-jump/PROVENANCE.md", "required": ["main.js", "sprites.png"] },
+  { "id": "xx142-b2.exe", "title": "xx142-b2.exe", "permission": "owner-reported", "notice": "games/xx142-b2.exe/PROVENANCE.md", "required": ["main.min.js"] },
+  { "id": "super-liquid-soccer", "title": "Super Liquid Soccer", "permission": "owner-reported", "notice": "games/super-liquid-soccer/PROVENANCE.md", "required": ["index.js", "index.wasm", "index.pck", "patch/poki-sdk.js", "patch/poki-sdk-core-v2.263.0.js", "patch/json/null.json"] }
 ]

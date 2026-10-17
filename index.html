@@ -28,5 +28,29 @@
   <p class="credit">BMQB Inc &middot; <a href="games/tower-master/LICENSE">MIT licence</a></p>
   <a class="game" href="games/a-dark-room/"><strong>A Dark Room</strong>A minimalist text adventure</a>
   <p class="credit">Michael Townsend and contributors &middot; <a href="games/a-dark-room/LICENSE.md">MPL-2.0 licence</a></p>
+  <section id="restored"><h2>Restored Packages</h2></section>
+  <p class="credit"><a href="PERMISSIONS.md">Publication basis and notices</a></p>
+  <script>
+    fetch('games-manifest.json').then(function (response) {
+      if (!response.ok) throw new Error('Manifest unavailable');
+      return response.json();
+    }).then(function (games) {
+      games.filter(function (game) { return game.permission === 'owner-reported'; }).forEach(function (game) {
+        var link = document.createElement('a');
+        link.className = 'game';
+        link.href = 'games/' + game.id + '/';
+        link.textContent = game.title;
+        var notice = document.createElement('p');
+        notice.className = 'credit';
+        var credits = document.createElement('a');
+        credits.href = game.notice;
+        credits.textContent = 'Credits and package information';
+        notice.append(credits);
+        document.getElementById('restored').append(link, notice);
+      });
+    }).catch(function () {
+      document.getElementById('restored').append(document.createTextNode('Game list unavailable. Please reload.'));
+    });
+  </script>
 </main></body>
 </html>

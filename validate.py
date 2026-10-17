@@ -32,14 +32,26 @@ for game in manifest:
     assert (ROOT / game["notice"]).is_file(), game
     assert (folder / "PROVENANCE.md").is_file(), game
     assert (folder / "index.html").is_file(), game
-    for page in folder.rglob("*.html"):
+    for required in game.get("required", []):
+        asset = folder / required
+        assert asset.is_file() and asset.stat().st_size, (game["id"], required)
+    if game.get("unityManifest"):
+        configuration = folder / game["unityManifest"]
+        unity = json.loads(configuration.read_text(encoding="utf-8-sig"))
+        # These releases target modern WebAssembly browsers, not the old asm.js fallback.
+        for key in ["dataUrl", "wasmCodeUrl", "wasmFrameworkUrl"]:
+            asset = configuration.parent / unity[key]
+            assert asset.is_file() and asset.stat().st_size, (game["id"], key)
+    for page in [folder / "index.html"]:
         parser = Assets()
         parser.feed(page.read_text(errors="replace"))
         for raw in parser.paths:
             if "'+" in raw or "+'" in raw:
                 continue  # Language assets assembled by the original runtime.
             url = urlsplit(raw)
-            assert not url.scheme and not url.netloc, (page, raw, "external runtime")
+            if url.scheme or url.netloc:
+                assert url.hostname in game.get("remoteResources", []), (page, raw, "unreviewed external runtime")
+                continue
             asset = page.parent / parser.base / unquote(url.path)
             assert asset.is_file(), (page, raw, "missing asset")
     print("Validated:", game["title"])
